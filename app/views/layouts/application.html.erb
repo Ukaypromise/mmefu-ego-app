@@ -11,6 +11,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container mt-2">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
   </body>
 </html>
