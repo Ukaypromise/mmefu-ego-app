@@ -15,6 +15,8 @@ gem "pg", "~> 1.1"
 # This Gem allow use a file with the personal user and password database
 gem 'figaro'
 
+gem 'devise'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
