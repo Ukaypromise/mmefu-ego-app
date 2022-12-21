@@ -19,3 +19,14 @@
    list-style: none;
     height: 75vh;
  }
+li{
+  list-style: none;
+}
+.categories li {
+   float: left;
+   width: 33.333%;
+   height: 100%;
+   position: relative;
+   overflow: hidden;
+   cursor: pointer;
+ }
