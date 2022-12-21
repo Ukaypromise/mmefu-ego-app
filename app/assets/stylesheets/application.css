@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ .category {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+    height: 75vh;
+ }
