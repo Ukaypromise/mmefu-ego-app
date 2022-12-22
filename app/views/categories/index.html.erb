@@ -1,0 +1,21 @@
+<div class="category-container">
+    <p style="color: green"><%= notice %></p>
+
+    <h1 class="title">Categories</h1>
+
+    <ul id="categories" >
+    <% @categories.each do |category| %>
+        <% if can? :destroy, category %>
+        <li class="category-list">
+        <%= render category %>
+        <div class="d-flex flex-row ">
+            <%= link_to "Edit", edit_category_path(category), class:"btn btn-primary mx-3"  %>
+            <%= button_to "Destroy", category_path(category.id), method: :delete, data: { turbo_confirm: "Are you sure you want to delete #{category.name}"}, class:"btn btn-primary"%>
+        </div>
+        </li>
+        <% end%>
+    <% end %>
+    </ul>
+    <%= link_to "Add New category", new_category_path, class:"btn btn-primary my-3" %>
+    
+</div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_20_203628) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_22_082501) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,27 +21,26 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_20_203628) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "total", default: "0.0"
     t.index ["user_id"], name: "index_categories_on_user_id"
   end
 
-  create_table "transaction_categories", force: :cascade do |t|
-    t.bigint "transaction_id", null: false
+  create_table "expense_categories", force: :cascade do |t|
+    t.bigint "expense_id", null: false
     t.bigint "category_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_transaction_categories_on_category_id"
-    t.index ["transaction_id"], name: "index_transaction_categories_on_transaction_id"
+    t.index ["category_id"], name: "index_expense_categories_on_category_id"
+    t.index ["expense_id"], name: "index_expense_categories_on_expense_id"
   end
 
-  create_table "transactions", force: :cascade do |t|
+  create_table "expenses", force: :cascade do |t|
     t.string "name"
     t.decimal "amount"
     t.bigint "user_id", null: false
-    t.bigint "category_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_transactions_on_category_id"
-    t.index ["user_id"], name: "index_transactions_on_user_id"
+    t.index ["user_id"], name: "index_expenses_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -58,8 +57,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_20_203628) do
   end
 
   add_foreign_key "categories", "users"
-  add_foreign_key "transaction_categories", "categories"
-  add_foreign_key "transaction_categories", "transactions"
-  add_foreign_key "transactions", "categories"
-  add_foreign_key "transactions", "users"
+  add_foreign_key "expense_categories", "categories"
+  add_foreign_key "expense_categories", "expenses"
+  add_foreign_key "expenses", "users"
 end
