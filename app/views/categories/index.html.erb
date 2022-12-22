@@ -9,7 +9,7 @@
         <li class="category-list">
         <%= render category %>
         <div class="path-links">
-            <%= link_to "Edit", edit_category_path(category), class:"btn btn-primary"  %>
+            <%= link_to "Edit", edit_category_path(category), class:"btn btn-primary mb-3"  %>
             <%= button_to "Destroy", category_path(category.id), method: :delete, data: { turbo_confirm: "Are you sure you want to delete #{category.name}"}, class:"btn btn-primary"%>
         </div>
         </li>

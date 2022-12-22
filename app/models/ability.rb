@@ -6,11 +6,11 @@ class Ability
       category.user == user
     end
 
-    can [:read, :destroy], Transaction do |transaction|
-      transaction.author == user
+    can [:read, :destroy], Expense do |expense|
+      expense.author == user
     end
 
     can :create, Category
-    can :create, Transaction
+    can :create, Expense
   end
 end
