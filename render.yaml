@@ -24,6 +24,7 @@ databases:
 
 services:
   - type: web
+    name: mmefu_ego_app
     env: ruby
     buildCommand: './bin/render-build.sh'
     startCommand: 'bundle exec puma -C config/puma.rb'
