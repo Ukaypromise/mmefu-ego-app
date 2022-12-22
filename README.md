@@ -105,7 +105,7 @@ Mmefu Ego is a web application where you can manage your budget. You have a list
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link - Not available](https://yourdeployedapplicationlink.com)
+- [Live Demo Link - ](https://mmefu-ego-app.onrender.com/)
 
 ## 🚀 Short Video Demostraction <a name="video"></a>
 
