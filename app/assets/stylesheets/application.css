@@ -24,11 +24,93 @@ body {
   background: #f1f1f1;
 }
 
+.nav-bg{
+  background-color: #3778c2;
+}
+
+.title{
+  color: #434b54;
+  font-size: 3em;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.logo{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
 .category-container {
-  margin: 0;
-  padding: 0;
+  /* Place items at the center */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#categories {
+  margin: 10px 10px;
+  padding: 5px;
+  width: 85%;
+}
+
+.category-list {
   list-style: none;
-  height: 100%;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.category-item{
+ display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.category-title{
+  font-size: 2em;
+  font-weight: 700;
+  color: #434b54;
+  text-decoration: none;
+}
+
+.title{
+  color: #434b54;
+  font-size: 3em;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.description{
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #434b54;
+  margin: 0.7rem;
+}
+
+.amount{
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #434b54;
+}
+.date{
+  font-size: 1em;
+  font-weight: 700;
+  color: #434b54;
+}
+.image-icon{
+  width: 90px;
+  height: 90px;
+  border-radius: 5px;
+  background: #ddd;
+  margin-right: 10px;
+  margin-bottom: 5px;
 }
 
 li {
@@ -42,4 +124,41 @@ li {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+}
+
+.category-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  margin: 0 20px;
+}
+
+.total {
+   border: 1px solid #ddd;
+  margin: 10px 20px;
+  font-size: 15px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.expense-category {
+  margin-top: 30px;
+}
+
+.expense-list {
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  margin: 10px 20px;
+}
+
+.show-expense {
+  border: 1px solid #ddd;
+  margin: 50px 30px;
+  background-color: gray;
+  border-radius: 5px;
+  padding: 30px 15px;
 }
