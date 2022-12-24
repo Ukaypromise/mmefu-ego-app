@@ -57,7 +57,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Recipe-app <a name="about-project"></a>
+# 📖 Budget App <a name="about-project"></a>
 
 Mmefu Ego is a web application where you can manage your budget. You have a list of transactions associated with a category, so that you can see how much money you spent and on what. Users can signin and add categories of budget and the expenses for their budgets with this application.
 
